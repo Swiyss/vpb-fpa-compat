@@ -1,0 +1,21 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "com.joao2.vpbfpa.mixin",
+  "plugin": "com.joao2.vpbfpa.mixin.VpbFpaMixinPlugin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "PlayerEntityModelTraceMixin",
+    "LivingEntityRendererTraceMixin",
+    "ModelCommandRendererTraceMixin",
+    "ModelPartRenderTraceMixin",
+    "HeldItemFeatureRendererTraceMixin",
+    "compat.EmfBipedPoseTraceMixin",
+    "compat.EmfModelPartVanillaRenderTraceMixin",
+    "compat.EmfModelPartCustomRenderTraceMixin",
+    "compat.NeaPlayerTransformerTraceMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  }
+}
