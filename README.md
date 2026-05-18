@@ -1,4 +1,4 @@
-# VPB Fresh Player Animations Compat
+﻿# VPB Fresh Player Animations Compat
 
 Client-side Fabric compatibility mod for the GoodCraft test profile. Milestone 1 is intentionally limited to safe detection and debug tooling for Vic's Point Blank guns, including Blue Archive Point Blank content-pack guns.
 
@@ -31,8 +31,8 @@ Supported fields:
 ```json
 {
   "enabled": true,
-  "debugLogging": true,
-  "debugOverlay": true,
+  "debugLogging": false,
+  "debugOverlay": false,
   "detectionMode": "auto",
   "armMode": "off",
   "includeOffhand": false,
@@ -43,7 +43,7 @@ Supported fields:
   "overlayScale": 1.0,
   "overlayBackground": true,
   "poseTracing": false,
-  "poseTraceLogging": true,
+  "poseTraceLogging": false,
   "poseTraceIntervalTicks": 40,
   "poseTraceLocalPlayerOnly": true,
   "poseTraceVpbOnly": true,
@@ -116,8 +116,8 @@ To collect trace logs in GoodCraft, create or edit `config/vpb-fpa-compat.json` 
 
 ```json
 {
-  "poseTracing": true,
-  "poseTraceLogging": true,
+  "poseTracing": false,
+  "poseTraceLogging": false,
   "poseTraceIntervalTicks": 40,
   "poseTraceLocalPlayerOnly": true,
   "poseTraceVpbOnly": true,
@@ -142,8 +142,8 @@ Visual proof mode for Milestone 2.2:
 {
   "armMode": "visual_probe_exaggerated_arms",
   "armRestoreLocalPlayerOnly": true,
-  "poseTracing": true,
-  "dumpModelParts": true,
+  "poseTracing": false,
+  "dumpModelParts": false,
   "visualProbePartNameFilter": ""
 }
 ```
@@ -156,8 +156,8 @@ To probe every discovered arm-like EMF/Fresh candidate:
 {
   "armMode": "visual_probe_all_arm_like_parts",
   "armRestoreLocalPlayerOnly": true,
-  "poseTracing": true,
-  "dumpModelParts": true,
+  "poseTracing": false,
+  "dumpModelParts": false,
   "dumpModelPartsMaxDepth": 6,
   "dumpModelPartsMaxParts": 128,
   "visualProbePartNameFilter": ""
@@ -172,8 +172,8 @@ Timing probes for Milestone 2.4:
 {
   "armMode": "visual_probe_after_set_angles_tail",
   "armRestoreLocalPlayerOnly": true,
-  "poseTracing": true,
-  "dumpModelParts": true,
+  "poseTracing": false,
+  "dumpModelParts": false,
   "dumpModelPartsMaxDepth": 6,
   "dumpModelPartsMaxParts": 128,
   "visualProbePartNameFilter": ""
@@ -184,8 +184,8 @@ Timing probes for Milestone 2.4:
 {
   "armMode": "visual_probe_at_actual_model_render",
   "armRestoreLocalPlayerOnly": true,
-  "poseTracing": true,
-  "dumpModelParts": true,
+  "poseTracing": false,
+  "dumpModelParts": false,
   "dumpModelPartsMaxDepth": 6,
   "dumpModelPartsMaxParts": 128,
   "visualProbePartNameFilter": ""
@@ -201,8 +201,8 @@ First real restore experiment for Milestone 2.5:
   "armMode": "restore_vpb_arms_after_set_angles_tail",
   "armRestoreLocalPlayerOnly": true,
   "armRestoreDebugCompare": true,
-  "poseTracing": true,
-  "dumpModelParts": true,
+  "poseTracing": false,
+  "dumpModelParts": false,
   "dumpModelPartsMaxDepth": 6,
   "dumpModelPartsMaxParts": 128,
   "visualProbePartNameFilter": ""
@@ -219,8 +219,8 @@ Milestone 2.6 layer diagnostics keep the same restore mode and vary only `armRes
   "armRestoreLayerMode": "arms_only",
   "armRestoreLocalPlayerOnly": true,
   "armRestoreDebugCompare": true,
-  "poseTracing": true,
-  "dumpModelParts": true,
+  "poseTracing": false,
+  "dumpModelParts": false,
   "dumpModelPartsMaxDepth": 6,
   "dumpModelPartsMaxParts": 128,
   "visualProbePartNameFilter": ""
@@ -238,9 +238,9 @@ Milestone 2.7 synchronization diagnostics keep `armMode` and `armRestoreLayerMod
   "armRestoreStrategy": "observe_only",
   "armRestoreLocalPlayerOnly": true,
   "armRestoreDebugCompare": true,
-  "poseTracing": true,
-  "poseTraceLogging": true,
-  "dumpModelParts": true,
+  "poseTracing": false,
+  "poseTraceLogging": false,
+  "dumpModelParts": false,
   "dumpModelPartsMaxDepth": 6,
   "dumpModelPartsMaxParts": 128,
   "visualProbePartNameFilter": ""
@@ -258,9 +258,9 @@ Milestone 2.8 part-render restore probe:
   "armRestoreStrategy": "restore_base_arms_at_part_render_only",
   "armRestoreLocalPlayerOnly": true,
   "armRestoreDebugCompare": true,
-  "poseTracing": true,
-  "poseTraceLogging": true,
-  "dumpModelParts": true,
+  "poseTracing": false,
+  "poseTraceLogging": false,
+  "dumpModelParts": false,
   "dumpModelPartsMaxDepth": 6,
   "dumpModelPartsMaxParts": 128,
   "visualProbePartNameFilter": ""
@@ -281,9 +281,9 @@ Priority test 1, hide base/inner arms and leave sleeves visible:
   "armRestoreSourceMode": "vanilla_arm_source",
   "armRestoreLocalPlayerOnly": true,
   "armRestoreDebugCompare": true,
-  "poseTracing": true,
-  "poseTraceLogging": true,
-  "dumpModelParts": true,
+  "poseTracing": false,
+  "poseTraceLogging": false,
+  "dumpModelParts": false,
   "dumpModelPartsMaxDepth": 6,
   "dumpModelPartsMaxParts": 128,
   "visualProbePartNameFilter": ""
@@ -300,9 +300,9 @@ Priority test 2, hide sleeves/outer layer and leave base arms visible:
   "armRestoreSourceMode": "vanilla_arm_source",
   "armRestoreLocalPlayerOnly": true,
   "armRestoreDebugCompare": true,
-  "poseTracing": true,
-  "poseTraceLogging": true,
-  "dumpModelParts": true,
+  "poseTracing": false,
+  "poseTraceLogging": false,
+  "dumpModelParts": false,
   "dumpModelPartsMaxDepth": 6,
   "dumpModelPartsMaxParts": 128,
   "visualProbePartNameFilter": ""
@@ -319,9 +319,9 @@ Priority test 3, treat sleeve/outer transform as authoritative and copy it to ma
   "armRestoreSourceMode": "vanilla_arm_source",
   "armRestoreLocalPlayerOnly": true,
   "armRestoreDebugCompare": true,
-  "poseTracing": true,
-  "poseTraceLogging": true,
-  "dumpModelParts": true,
+  "poseTracing": false,
+  "poseTraceLogging": false,
+  "dumpModelParts": false,
   "dumpModelPartsMaxDepth": 6,
   "dumpModelPartsMaxParts": 128,
   "visualProbePartNameFilter": ""
@@ -342,9 +342,9 @@ Test 1, explicitly restore sleeves to the VPB source pose and hide base/custom a
   "armRestoreSourceMode": "vanilla_arm_source",
   "armRestoreLocalPlayerOnly": true,
   "armRestoreDebugCompare": true,
-  "poseTracing": true,
-  "poseTraceLogging": true,
-  "dumpModelParts": true
+  "poseTracing": false,
+  "poseTraceLogging": false,
+  "dumpModelParts": false
 }
 ```
 
@@ -358,9 +358,9 @@ Test 2, restore sleeves and hide only EMF custom arms:
   "armRestoreSourceMode": "vanilla_arm_source",
   "armRestoreLocalPlayerOnly": true,
   "armRestoreDebugCompare": true,
-  "poseTracing": true,
-  "poseTraceLogging": true,
-  "dumpModelParts": true
+  "poseTracing": false,
+  "poseTraceLogging": false,
+  "dumpModelParts": false
 }
 ```
 
@@ -374,9 +374,9 @@ Test 3, source the vanilla parent/proxy arm and neutralize EMF custom arm local 
   "armRestoreSourceMode": "vanilla_arm_source",
   "armRestoreLocalPlayerOnly": true,
   "armRestoreDebugCompare": true,
-  "poseTracing": true,
-  "poseTraceLogging": true,
-  "dumpModelParts": true
+  "poseTracing": false,
+  "poseTraceLogging": false,
+  "dumpModelParts": false
 }
 ```
 
@@ -394,9 +394,9 @@ Full delta test:
   "armRestoreSourceMode": "vanilla_arm_source",
   "armRestoreLocalPlayerOnly": true,
   "armRestoreDebugCompare": true,
-  "poseTracing": true,
-  "poseTraceLogging": true,
-  "dumpModelParts": true
+  "poseTracing": false,
+  "poseTraceLogging": false,
+  "dumpModelParts": false
 }
 ```
 
@@ -410,9 +410,9 @@ Pitch-only delta test:
   "armRestoreSourceMode": "vanilla_arm_source",
   "armRestoreLocalPlayerOnly": true,
   "armRestoreDebugCompare": true,
-  "poseTracing": true,
-  "poseTraceLogging": true,
-  "dumpModelParts": true
+  "poseTracing": false,
+  "poseTraceLogging": false,
+  "dumpModelParts": false
 }
 ```
 
@@ -426,9 +426,9 @@ No-roll delta test:
   "armRestoreSourceMode": "vanilla_arm_source",
   "armRestoreLocalPlayerOnly": true,
   "armRestoreDebugCompare": true,
-  "poseTracing": true,
-  "poseTraceLogging": true,
-  "dumpModelParts": true
+  "poseTracing": false,
+  "poseTraceLogging": false,
+  "dumpModelParts": false
 }
 ```
 
@@ -443,9 +443,9 @@ Parent-arm lock:
   "armRestoreStrategy": "lock_parent_arms_after_emf_animate",
   "armRestoreSourceMode": "vanilla_arm_source",
   "armRestoreDebugCompare": true,
-  "poseTracing": true,
-  "poseTraceLogging": true,
-  "dumpModelParts": true,
+  "poseTracing": false,
+  "poseTraceLogging": false,
+  "dumpModelParts": false,
   "armLockFreezeWhileHoldingGun": false
 }
 ```
@@ -459,9 +459,9 @@ Parent-arm lock with held-item bridge diagnostics:
   "armRestoreStrategy": "lock_parent_arms_and_held_item",
   "armRestoreSourceMode": "vanilla_arm_source",
   "armRestoreDebugCompare": true,
-  "poseTracing": true,
-  "poseTraceLogging": true,
-  "dumpModelParts": true,
+  "poseTracing": false,
+  "poseTraceLogging": false,
+  "dumpModelParts": false,
   "armLockFreezeWhileHoldingGun": false
 }
 ```
@@ -487,9 +487,9 @@ Test 1, current winning behavior made explicit:
   "armLockLeftYawOffset": 0.0,
   "armLockLeftRollOffset": 0.0,
   "armRestoreDebugCompare": true,
-  "poseTracing": true,
-  "poseTraceLogging": true,
-  "dumpModelParts": true
+  "poseTracing": false,
+  "poseTraceLogging": false,
+  "dumpModelParts": false
 }
 ```
 
@@ -504,9 +504,9 @@ Test 2, custom inner arms use the calibrated source pose:
   "armLockCustomArmMode": "source",
   "armLockFreezeWhileHoldingGun": false,
   "armRestoreDebugCompare": true,
-  "poseTracing": true,
-  "poseTraceLogging": true,
-  "dumpModelParts": true
+  "poseTracing": false,
+  "poseTraceLogging": false,
+  "dumpModelParts": false
 }
 ```
 
@@ -521,9 +521,9 @@ Test 3, custom inner arms are hidden for the scoped render:
   "armLockCustomArmMode": "hidden",
   "armLockFreezeWhileHoldingGun": false,
   "armRestoreDebugCompare": true,
-  "poseTracing": true,
-  "poseTraceLogging": true,
-  "dumpModelParts": true
+  "poseTracing": false,
+  "poseTraceLogging": false,
+  "dumpModelParts": false
 }
 ```
 
@@ -552,9 +552,9 @@ First sleeve-only pitch test:
   "armLockLeftSleeveYawOffset": 0.0,
   "armLockLeftSleeveRollOffset": 0.0,
   "armRestoreDebugCompare": true,
-  "poseTracing": true,
-  "poseTraceLogging": true,
-  "dumpModelParts": true
+  "poseTracing": false,
+  "poseTraceLogging": false,
+  "dumpModelParts": false
 }
 ```
 
@@ -574,3 +574,4 @@ For the simplified behavior where normal stance passes through and only aiming l
 ```
 
 Keep global offsets and sleeve offsets at `0.0` for this test.
+

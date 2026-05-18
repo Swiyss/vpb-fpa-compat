@@ -18,10 +18,10 @@ public final class CompatConfig {
     public boolean enabled = true;
 
     @SerializedName(value = "debugLogging", alternate = {"debug_logging"})
-    public boolean debugLogging = true;
+    public boolean debugLogging = false;
 
     @SerializedName(value = "debugOverlay", alternate = {"debug_overlay"})
-    public boolean debugOverlay = true;
+    public boolean debugOverlay = false;
 
     @SerializedName(value = "detectionMode", alternate = {"detection_mode"})
     public String detectionMode = DetectionMode.AUTO.id();
@@ -54,7 +54,7 @@ public final class CompatConfig {
     public boolean poseTracing = false;
 
     @SerializedName(value = "poseTraceLogging", alternate = {"pose_trace_logging"})
-    public boolean poseTraceLogging = true;
+    public boolean poseTraceLogging = false;
 
     @SerializedName(value = "poseTraceIntervalTicks", alternate = {"pose_trace_interval_ticks"})
     public int poseTraceIntervalTicks = 40;
@@ -224,3 +224,5 @@ public final class CompatConfig {
         return Math.max(1, Math.min(512, dumpModelPartsMaxParts));
     }
 }
+
+
