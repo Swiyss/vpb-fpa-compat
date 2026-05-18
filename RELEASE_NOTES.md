@@ -1,19 +1,23 @@
-﻿# VPB Fresh Player Animations Compat v0.1.0
+﻿# VPB Fresh Player Animations Compat v0.1.2
 
-Initial experimental client-side compatibility release.
+Hotfix release.
 
-## What it does
+## Fixed
 
-- Detects Vic's Point Blank guns, including Point Blank content-pack guns such as Blue Archive guns.
-- Keeps normal Fresh Player Animations / VPB third-person behavior while simply holding a gun.
-- Applies the compatibility arm lock only while aiming.
-- Hides problematic sleeve/outer-arm layers during the active aim lock.
-- Keeps the held gun aligned during the aim lock.
-- Preserves Fresh Player Animations body and leg movement.
-- Does not change first-person rendering.
-- Does not change gameplay, damage, sounds, projectiles, recipes, networking, or VPB logic.
+- Fresh installs now enable the intended aim-only compatibility behavior by default.
+- Debug overlay remains disabled by default.
+- Debug logging remains disabled by default.
+- Pose tracing remains disabled by default.
 
-## Notes
+## Default behavior
 
-This is an experimental compatibility mod built for GoodCraft-style VPB + Fresh Player Animations setups.
-Default config remains safe with arm mode off unless explicitly enabled.
+- Normal third-person Fresh Player Animations behavior while simply holding a gun.
+- Compatibility arm/gun lock only while aiming.
+- Problematic sleeve layers are hidden during the active aim lock.
+- Held gun alignment while aiming.
+- No first-person rendering changes.
+- No gameplay, damage, projectile, recipe, sound, or networking changes.
+
+## Why this release exists
+
+v0.1.1 disabled debug defaults correctly, but a fresh install without a config still used `armMode=off`, meaning the mod loaded but did nothing. v0.1.2 fixes that.

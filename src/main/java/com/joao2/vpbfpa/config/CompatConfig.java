@@ -99,10 +99,10 @@ public final class CompatConfig {
     public boolean armLockFreezeWhileHoldingGun = false;
 
     @SerializedName(value = "armLockAimOnly", alternate = {"arm_lock_aim_only"})
-    public boolean armLockAimOnly = false;
+    public boolean armLockAimOnly = true;
 
     @SerializedName(value = "armLockHideSleeves", alternate = {"arm_lock_hide_sleeves"})
-    public boolean armLockHideSleeves = false;
+    public boolean armLockHideSleeves = true;
 
     @SerializedName(value = "armLockRightPitchOffset", alternate = {"arm_lock_right_pitch_offset"})
     public float armLockRightPitchOffset = 0.0F;

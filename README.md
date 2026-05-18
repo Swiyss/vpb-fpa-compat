@@ -1,4 +1,4 @@
-﻿# VPB Fresh Player Animations Compat
+# VPB Fresh Player Animations Compat
 
 Client-side Fabric compatibility mod for the GoodCraft test profile. Milestone 1 is intentionally limited to safe detection and debug tooling for Vic's Point Blank guns, including Blue Archive Point Blank content-pack guns.
 
@@ -34,7 +34,7 @@ Supported fields:
   "debugLogging": false,
   "debugOverlay": false,
   "detectionMode": "auto",
-  "armMode": "off",
+  "armMode": "restore_vpb_arms_after_set_angles_tail",
   "includeOffhand": false,
   "allowBodyFreshAnimation": true,
   "logIntervalTicks": 40,
@@ -51,7 +51,7 @@ Supported fields:
   "armRestoreLocalPlayerOnly": true,
   "armRestoreDebugCompare": false,
   "armRestoreLayerMode": "arms_and_sleeves",
-  "armRestoreStrategy": "source_pose_to_selected_parts",
+  "armRestoreStrategy": "lock_parent_arms_and_held_item",
   "armRestoreSourceMode": "vanilla_arm_source",
   "dumpModelParts": false,
   "dumpModelPartsMaxDepth": 6,
