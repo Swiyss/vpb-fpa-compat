@@ -96,14 +96,14 @@ Do not copy the jar into GoodCraft until the build succeeds and jar contents are
 Manual copy after a successful build:
 
 ```powershell
-$Profile = "C:\Users\joao2\AppData\Roaming\ModrinthApp\profiles\Good_Craft test version"
+$Profile = "<path-to-local-goodcraft-test-profile>"
 Copy-Item "build\libs\vpb-fpa-compat-0.1.0.jar" "$Profile\mods\"
 ```
 
 Optional helper script:
 
 ```powershell
-.\scripts\install-goodcraft-test-jar.ps1
+.\scripts\install-goodcraft-test-jar.ps1 -Profile <path-to-local-goodcraft-test-profile>
 ```
 
 The helper only moves previous `vpb-fpa-compat-*.jar` files from `mods` into `vpb-fpa-compat-backups\<timestamp>` under the GoodCraft profile root, then copies the latest built compatibility jar into `mods`. It does not touch GoodCraft configs, resource packs, content packs, or unrelated mods.

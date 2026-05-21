@@ -11,7 +11,7 @@
 GoodCraft profile:
 
 ```text
-C:\Users\joao2\AppData\Roaming\ModrinthApp\profiles\Good_Craft test version
+<path-to-local-goodcraft-test-profile>
 ```
 
 ## Build And Jar Checks
@@ -36,7 +36,7 @@ Expected:
 Only after successful build:
 
 ```powershell
-$Profile = "C:\Users\joao2\AppData\Roaming\ModrinthApp\profiles\Good_Craft test version"
+$Profile = "<path-to-local-goodcraft-test-profile>"
 Get-ChildItem "$Profile\mods" -Filter "vpb-fpa-compat-*.jar"
 Copy-Item "build\libs\<built-jar>.jar" "$Profile\mods\"
 ```

@@ -1,5 +1,27 @@
-.gradle/
+# Local workflow
+.codex/
+.agents/
+prompts/
+AGENTS.md
+
+# Build/runtime outputs
 build/
+.gradle/
 run/
 out/
 *.class
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+*.zip
+*.rar
+*.mrpack
+*.log
+logs/
+crash-reports/
+screenshots/
+
+# Local evidence/reference material
+reference-mods/
+input/
+local/
+*.hprof

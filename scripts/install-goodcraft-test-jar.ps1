@@ -1,9 +1,13 @@
 param(
     [switch]$Build,
-    [string]$Profile = "C:\Users\joao2\AppData\Roaming\ModrinthApp\profiles\Good_Craft test version"
+    [string]$Profile
 )
 
 $ErrorActionPreference = "Stop"
+
+if ([string]::IsNullOrWhiteSpace($Profile) -or $Profile -eq "<path-to-local-goodcraft-test-profile>") {
+    throw "Pass -Profile with your local GoodCraft test profile path, for example: .\scripts\install-goodcraft-test-jar.ps1 -Profile <path-to-local-goodcraft-test-profile>"
+}
 
 $Repo = Resolve-Path (Join-Path $PSScriptRoot "..")
 $Mods = Join-Path $Profile "mods"

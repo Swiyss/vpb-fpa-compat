@@ -7,13 +7,13 @@ This document captures the approved planning baseline for the VPB + Fresh Player
 Workspace:
 
 ```text
-C:\Projects\vpb-fpa-compat
+<path-to-vpb-fpa-compat-repo>
 ```
 
 GoodCraft profile:
 
 ```text
-C:\Users\joao2\AppData\Roaming\ModrinthApp\profiles\Good_Craft test version
+<path-to-local-goodcraft-test-profile>
 ```
 
 No GoodCraft files should be modified during implementation, except for copying a successfully built test jar into the profile `mods` folder as a deliberate and documented validation step.
@@ -24,7 +24,7 @@ No GoodCraft files should be modified during implementation, except for copying 
 - Minecraft: `1.21.11`.
 - Fabric Loader: `0.19.2`.
 - Fabric API in profile: `0.141.4+1.21.11`.
-- Confirmation source: `logs/latest.log`, which reported loading Minecraft `1.21.11` with Fabric Loader `0.19.2`.
+- Confirmation source: the client runtime log, which reported loading Minecraft `1.21.11` with Fabric Loader `0.19.2`.
 - `modrinth.index.json` and `profile.json` were not present in the profile root during inspection, so logs and installed files are the reliable local evidence.
 
 The compatibility project should therefore be a Fabric client mod, not NeoForge and not multi-loader.
@@ -86,7 +86,7 @@ Because Blue Archive guns are registered through Point Blank and use the `pointb
 Fresh Animations and extension packs are not merely present; local evidence shows they are active.
 
 - `options.txt` includes `file/FreshAnimations_v1.10.4.zip` and `file/FA+All_Extensions-v1.8.1.zip` in the active `resourcePacks` list.
-- `logs/latest.log` resource reload output includes `file/FA+Player-v1.0.zip` and `file/FA+All_Extensions-v1.8.1.zip`.
+- Client runtime log resource reload output confirms the Fresh Animations player and extension resource packs are active.
 - If future logs/options differ, active state must be re-confirmed in-game before diagnosing arm animation behavior.
 
 `FA+Player-v1.0.zip` contains EMF/CEM player assets including:

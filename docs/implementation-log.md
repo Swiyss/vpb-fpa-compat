@@ -30,7 +30,7 @@ validation command:
 
 ```powershell
 Get-Content "$Profile\options.txt" -Raw | Select-String -Pattern "resourcePacks|incompatibleResourcePacks"
-Select-String -Path "$Profile\logs\latest.log" -Pattern "FreshAnimations|FA\+Player|FA\+All|Reloading ResourceManager"
+Select the client runtime log under the local profile and search for Fresh Animations resource reload entries.
 ```
 
 result: Local files show Fresh Animations and FA All Extensions in `options.txt`; latest resource reload log also includes `FA+Player-v1.0.zip`.
@@ -102,8 +102,8 @@ files changed:
 - `docs/compat-map.md`
 - `docs/test-matrix.md`
 - `docs/implementation-log.md`
-- `.agents/agents/client-render-mixin-engineer.md`
-- `.agents/skills/minecraft-client-compat-release.md`
+- Local workflow notes for client render mixin engineering.
+- Local workflow notes for Minecraft client compatibility release validation.
 
 reason: Add snake_case config aliases while keeping camelCase preferred, clarify that Milestone 1 has no mixins, document `fresh: unknown` as acceptable before runtime validation, and add a narrow GoodCraft install helper that is not run automatically.
 

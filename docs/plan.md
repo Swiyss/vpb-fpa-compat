@@ -27,14 +27,7 @@ Create and maintain:
 - `docs/compat-map.md`
 - `docs/plan.md`
 - `docs/test-matrix.md`
-- `.agents/agents/modpack-animation-inspector.md`
-- `.agents/agents/client-render-mixin-engineer.md`
-- `.agents/agents/qa-release-validator.md`
-- `.agents/skills/goodcraft-modpack-probe.md`
-- `.agents/skills/vpb-fpa-animation-trace.md`
-- `.agents/skills/minecraft-client-compat-release.md`
-
-Use `.agents/...` because the workspace had no existing `.codex/agents` or `.codex/skills` convention.
+- Local workflow notes for modpack inspection, render mixins, QA validation, GoodCraft probing, animation tracing, and release checks.
 
 ## Milestone 1: Small Client Mod, Detection, Debug
 
@@ -380,7 +373,7 @@ Deployment happens only after a successful build:
 4. Copy the new built jar into:
 
 ```text
-C:\Users\joao2\AppData\Roaming\ModrinthApp\profiles\Good_Craft test version\mods
+<path-to-local-goodcraft-test-profile>\mods
 ```
 
 Do not edit GoodCraft configs, jars, zips, resource packs, or content packs.
